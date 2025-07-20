@@ -61,6 +61,8 @@ printBookSummary("The Brothers Karamosov", 780, 780);
 printBookSummary("Atomic Habits", 177, 304);
 printBookSummary("The Midnight Library", 88, 320);
 
+//Use Arrays + Loop
+
 let bookTitles = [title1, title2, title3];
 console.log(bookTitles);
 let booksTotalPages = [ totalPages1, totalPages2, totalPages3]
@@ -71,6 +73,8 @@ console.log(booksTotalPagesRead);
 for (let i = 0; i < bookTitles.length; i++) {
   printBookSummary(bookTitles[i], booksTotalPagesRead[i], booksTotalPages[i]);
 }
+
+// Utility Functions
 
 function alltotalPagesRead(booksTotalPagesRead) {
   let total = 0;
@@ -97,8 +101,17 @@ function findBookWithMostPagesLeft(bookTitles, booksTotalPages, booksTotalPagesR
   return bookWithMostLeft;
 }
 
+//Display Results
+
+function printReadingSummary (fullName, month, booksTotalPagesRead) {
+  console.log( fullName+ "'s reading progress for " + month + ": " + alltotalPagesRead(booksTotalPagesRead) + " pages read.");
+  
+}
+
 console.log("Your book with most pages left: "+ findBookWithMostPagesLeft(bookTitles, booksTotalPages, booksTotalPagesRead));
-console.log( fullName+ "'s reading progress for " + month + ": " + alltotalPagesRead(booksTotalPagesRead) + " pages read.");
+printReadingSummary(fullName, month, booksTotalPagesRead);
+
+
 
 
 
