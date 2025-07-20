@@ -97,7 +97,8 @@ function findBookWithMostPagesLeft(bookTitles, booksTotalPages, booksTotalPagesR
   return bookWithMostLeft;
 }
 
-console.log(findBookWithMostPagesLeft(bookTitles, booksTotalPages, booksTotalPagesRead));
+console.log("Your book with most pages left: "+ findBookWithMostPagesLeft(bookTitles, booksTotalPages, booksTotalPagesRead));
+console.log( fullName+ "'s reading progress for " + month + ": " + alltotalPagesRead(booksTotalPagesRead) + " pages read.");
 
 
 
