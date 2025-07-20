@@ -82,6 +82,23 @@ function alltotalPagesRead(booksTotalPagesRead) {
 
 console.log("Total pages read: " + alltotalPagesRead(booksTotalPagesRead));
 
+function findBookWithMostPagesLeft(bookTitles, booksTotalPages, booksTotalPagesRead) {
+  let maxPagesLeft = 0;
+  let bookWithMostLeft = "";
+
+  for (let i = 0; i < bookTitles.length; i++) {
+    let pagesLeft = booksTotalPages[i] - booksTotalPagesRead[i];
+    if (pagesLeft > maxPagesLeft) {
+      maxPagesLeft = pagesLeft;
+      bookWithMostLeft = bookTitles[i];
+    }
+  }
+
+  return bookWithMostLeft;
+}
+
+console.log(findBookWithMostPagesLeft(bookTitles, booksTotalPages, booksTotalPagesRead));
+
 
 
 
